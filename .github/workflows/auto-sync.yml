@@ -2,8 +2,8 @@ name: Auto-Sync Fork
 
 on:
   schedule:
-    - cron: '0 */4 * * *'  # Runs automatically every day at midnight
-  workflow_dispatch: # Allows us to manually trigger it
+    - cron: '0 */4 * * *' # Runs automatically every 4 hours
+  workflow_dispatch:
 
 jobs:
   sync:
