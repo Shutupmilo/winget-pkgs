@@ -1,17 +1,17 @@
-name: Auto-Sync Fork
+# name: Auto-Sync Fork
 
-on:
-  schedule:
-    - cron: '0 */4 * * *' # Runs automatically every 4 hours
-  workflow_dispatch:
+# on:
+#  schedule:
+#    - cron: '0 */4 * * *' # Runs automatically every 4 hours
+#  workflow_dispatch:
 
-jobs:
-  sync:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Sync from Microsoft Upstream
-        run: gh repo sync ${{ github.repository }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#jobs:
+#  sync:
+#    runs-on: ubuntu-latest
+#    permissions:
+#      contents: write
+#    steps:
+#      - name: Sync from Microsoft Upstream
+#        run: gh repo sync ${{ github.repository }}
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
